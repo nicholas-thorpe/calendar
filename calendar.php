@@ -6,6 +6,8 @@
 	<head>
 		<meta charset = "utf-8">
 		<title>Calendar</title>
+		
+		<?php include "calendarFunctions.php" ?>
 	</head>
 	<body>
 		<h1>Calendar Generator</h1>
@@ -24,7 +26,7 @@
 			</select>
 			
 			<button type = "submit" value = "Submit">Submit</button>
-			<button type = "button"><a href = "<?php echo basename($_SERVER['PHP_SELF']);?>">Reset</a></button>
+			<button type = "button"><a href = "<?php echo basename($_SERVER['PHP_SELF']); ?>">Reset</a></button>
 		</form>
 		<div id = "results">
 			
