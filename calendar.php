@@ -10,18 +10,25 @@
 		<?php include "calendarFunctions.php" ?>
 		<?php
 			//Declare time variables using POST
-			$year = $_POST['$year'];
-			$month = $_POST['$month'];
+			$year = $_POST['year'];
+			$month = $_POST['month'];
 		?>
+		
+		<style>
+			<?php
+				if (!$year && !$month)
+					echo "#results {display: none;}";
+			?>
+		</style>
 	</head>
 	<body>
 		<h1>Calendar Generator</h1>
 		
 		<form method = "post" action = "">
-			<label for = "Year">Year</label>
+			<label for = "year">Year</label>
 			<input type = "text" name = "year" value = ""/>
 			
-			<label for = "Month">Month</label>
+			<label for = "month">Month</label>
 			<select name = "month">
 				<?php
 					//Place the blank month option
