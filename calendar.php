@@ -8,19 +8,31 @@
 		<title>Calendar</title>
 		
 		<?php include "calendarFunctions.php" ?>
+		<?php
+			//Declare time variables using POST
+			$year = $_POST['$year'];
+			$month = $_POST['$month'];
+		?>
 	</head>
 	<body>
 		<h1>Calendar Generator</h1>
 		
-		<form action = "">
+		<form method = "post" action = "">
 			<label for = "Year">Year</label>
 			<input type = "text" name = "year" value = ""/>
 			
 			<label for = "Month">Month</label>
 			<select name = "month">
 				<?php
-					for ($i = 0; $i < 13; $i++) {
-						
+					//Place the blank month option
+					echo "<option value = '0'></option>";
+					
+					//Place the options for January-December
+					for ($i = 1; $i < 13; $i++) {
+						$monthOp = "2000-" . $i . "-01";
+						$monthOp = strtotime($monthOp);
+						$monthOp = date("F", $monthOp);
+						echo "<option value = '$i'>$monthOp</option>";
 					}
 				?>
 			</select>
