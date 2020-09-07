@@ -6,8 +6,9 @@
 	<head>
 		<meta charset = "utf-8">
 		<title>Calendar</title>
+		<link rel = "stylesheet" href = "calendar.css" />
 		
-		<?php include "calendarFunctions.php" ?>
+		<?php require "calendarFunctions.php" ?>
 		<?php
 			//Declare time variables using POST
 			$year = $_POST['year'];
