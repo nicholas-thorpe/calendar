@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- Insert honor pledge here -->
+<!-- On my honor, I have neither given nor received any academic aid or information that would violate the Honor Code of Mars Hill University.  -->
 
 <html lang = "en-US">
 	<head>
