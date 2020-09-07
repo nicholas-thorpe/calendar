@@ -3,7 +3,8 @@
 	Checks if a given year-month combination is valid
 */
 function isValid($year, $month) {
-
+	return true; //leave this in here until function is finished
+	return;
 }
 
 /*

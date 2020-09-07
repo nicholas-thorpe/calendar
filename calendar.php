@@ -49,7 +49,15 @@
 			<button type = "button"><a href = "<?php echo basename($_SERVER['PHP_SELF']); ?>">Reset</a></button>
 		</form>
 		<div id = "results">
+			<?php
+				if (!isValid($month, $year)) {
+			?>
 			
+			<h2 id = "error>Error</h2>
+			
+			<?php
+				}
+			?>
 		</div>
 	</body>
 </html>
