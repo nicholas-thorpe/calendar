@@ -33,3 +33,27 @@ sub {
 	margin-top: 30px;
 	padding: 20px;
 }
+
+th {
+	color: blue;
+	border: 2px solid black;
+	padding: 25px 25px;
+}
+
+td {
+	padding: 25px 25px;
+}
+
+table {
+	width: 50%;
+}
+
+table, td {
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+
+table, th {
+	text-align: center;
+}
+

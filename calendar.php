@@ -25,7 +25,7 @@
 	<body>
 		<h1>Calendar Generator</h1>
 		
-		<form method = "post" action = "">
+		<form method = "post" action = "<?php echo basename($_SERVER['PHP_SELF']);?>">
 			<label for = "year">Year</label>
 			<input type = "text" name = "year" value = ""/>
 			
@@ -42,6 +42,9 @@
 						$monthOp = date("F", $monthOp);
 						echo "<option value = '$i'>$monthOp</option>";
 					}
+					
+					//Place the option for the whole year
+					echo "<option value = '13'>Whole Year</option>";
 				?>
 			</select>
 			
@@ -50,13 +53,19 @@
 		</form>
 		<div id = "results">
 			<?php
-				if (!isValid($month, $year)) {
+				if (!isValid($year)) {
 			?>
 			
-			<h2 id = "error>Error</h2>
+			<h2 id = "error">Error</h2>
 			
 			<?php
-				}
+				} else {
+			?>
+			
+			<h2 id = "success"><?php echo $year;?></h2>
+			
+			<?php
+				generateCalendar($year, $month, );
 			?>
 		</div>
 	</body>
