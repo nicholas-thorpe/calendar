@@ -56,7 +56,13 @@ function monthCalendar($year, $month) {
 			echo "</tr> <tr>";
 	}
 	
-	//Close out the table	
+	//Load the tailing empty spaces
+	while ($weekTrack % 7 != 0) {
+		echo "<td>&nbsp</td>";
+		$weekTrack++;		
+	}
+	
+	//Close out the table
 	echo "</tr>";
 	echo "</table>";
 }
