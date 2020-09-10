@@ -1,8 +1,8 @@
 <?php
 /*
-	Checks if a given year combination is valid
+	Checks if a given year is valid
 */
-function isValid($year) {
+function validYear($year) {
 	//All years beyond 1582 are apparently fine
 	return ($year >= 1583);
 }

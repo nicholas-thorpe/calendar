@@ -66,9 +66,17 @@
 				
 				//If it's an invalid year, the script freaks out
 				//Otherwise, it prints things like the levelheaded child it is
-				if (!isValid($year)) {
+				if ($month == 0) {
+					echo "<h2 id = \"error\">Error</h2>";
+					echo "<p>ERROR: Please enter a month</p>";
+				} else if (!is_numeric($year)) {
+					echo "<h2 id = \"error\">Error</h2>";
+					echo "<p>ERROR: Year must be numeric</p>";
+				} else if (!validYear($year)) {
 					echo "<h2 id = \"error\">Error</h2>";
 					echo "<p>ERROR: Year must be 1583 or later</p>";
+				} else if ($month < 0 || $month > 13) {
+					echo "<p>Hey buddy quit messing with my code</p>";
 				} else if ($month == 13) {
 					yearCalendar($year);
 				} else {
